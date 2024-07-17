@@ -33,3 +33,5 @@ def preprocess_text(text):
 
 # Apply preprocessing
 df['Description'] = df['Description'].apply(preprocess_text)
+
+df.to_csv('cleaned_data.csv')
