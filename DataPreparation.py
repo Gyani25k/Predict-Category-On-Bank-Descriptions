@@ -15,6 +15,11 @@ nltk.download('punkt')
 
 df = pd.read_csv('YOUR_CSV_FILE_LOCATIONS')
 
+try:
+    df = df.drop(columns=['Unnamed: 0'])
+except:
+    df = df
+
 # Preprocessing function
 def preprocess_text(text):
     # Lowercasing
